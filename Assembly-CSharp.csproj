@@ -69,6 +69,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Scipts\CrossAnimate.cs" />
     <Compile Include="Assets\Scipts\EnemyScript.cs" />
     <Compile Include="Assets\Scipts\GunFire.cs" />
     <Compile Include="Assets\Scipts\HandGunDamage.cs" />

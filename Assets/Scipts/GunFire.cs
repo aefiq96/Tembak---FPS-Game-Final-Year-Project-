@@ -11,6 +11,7 @@ public class GunFire : MonoBehaviour
             AudioSource gunsound = GetComponent< AudioSource > ();
             gunsound.Play();
             GetComponent< Animation > ().Play("GunShot");
+            GlobalAmmo.CurrentAmmo -= 1;
         }
     }
 

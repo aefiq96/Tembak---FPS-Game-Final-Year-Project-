@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CrossAnimate : MonoBehaviour
-{
+{   //declaring variables
     public GameObject UpCurs;
     public GameObject DownCurs;
     public GameObject LeftCurs;
@@ -27,7 +27,7 @@ public class CrossAnimate : MonoBehaviour
     }
 
     IEnumerator WaitingAnim()
-    {
+    {   //while loop
         while (true)
         {
             while (!Input.GetButtonDown("Fire1"))

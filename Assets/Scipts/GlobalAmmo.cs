@@ -5,15 +5,19 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class GlobalAmmo : MonoBehaviour
-{
+{   //declaring variables
     public static int CurrentAmmo;
     public int InternalAmmo;
     public GameObject AmmoDisplay;
 
+    public static int LoadedAmmo;
+    public int Internaloaded;
+    public GameObject LoadedDisplay;
+
     void Update()
-    {
-        InternalAmmo = CurrentAmmo;
-        AmmoDisplay.GetComponent< Text > ().text = "" + InternalAmmo;
+    {   //for ammo display addition
+        Internaloaded = CurrentAmmo;
+        AmmoDisplay.GetComponent< Text > ().text = "" + Internaloaded;
     }
 
 }

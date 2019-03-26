@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CrossAnimate : MonoBehaviour
 {
-    GameObject UpCurs;
-    GameObject DownCurs;
-    GameObject LeftCurs;
-    GameObject RightCurs;
-    private Animator upAnim;
-    private Animator downAnim;
-    private Animator leftAnim;
-    private Animator rightAnim;
+    public GameObject UpCurs;
+    public GameObject DownCurs;
+    public GameObject LeftCurs;
+    public GameObject RightCurs;
+    public Animator upAnim;
+    public Animator downAnim;
+    public Animator leftAnim;
+    public Animator rightAnim;
 
     void Awake()
     {

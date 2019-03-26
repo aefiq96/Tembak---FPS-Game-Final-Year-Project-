@@ -7,8 +7,8 @@ using UnityEngine.EventSystems;
 public class GlobalAmmo : MonoBehaviour
 {
     public static int CurrentAmmo;
-    int InternalAmmo;
-    GameObject AmmoDisplay;
+    public int InternalAmmo;
+    public GameObject AmmoDisplay;
 
     void Update()
     {

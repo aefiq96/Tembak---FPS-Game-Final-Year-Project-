@@ -16,8 +16,11 @@ public class GlobalAmmo : MonoBehaviour
 
     void Update()
     {   //for ammo display addition
+        InternalAmmo = CurrentAmmo;
         Internaloaded = CurrentAmmo;
         AmmoDisplay.GetComponent< Text > ().text = "" + Internaloaded;
+        LoadedDisplay.GetComponent<Text>().text = "" + LoadedAmmo;
+
     }
 
 }

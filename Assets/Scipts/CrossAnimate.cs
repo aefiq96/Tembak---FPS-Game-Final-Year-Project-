@@ -13,7 +13,7 @@ public class CrossAnimate : MonoBehaviour
     public Animator leftAnim;
     public Animator rightAnim;
 
-    void Awake()
+    /*void Awake()
     {
         StartCoroutine(WaitingAnim());
     }
@@ -37,5 +37,25 @@ public class CrossAnimate : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             SetAnim(false);
         }
+    }*/
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            UpCurs.GetComponent ( "Animator" );
+            DownCurs.GetComponent ( "Animator");
+            LeftCurs.GetComponent ( "Animator" );
+            RightCurs.GetComponent ( "Animator" );
+            WaitingAnim();
+        }
+    }
+
+    IEnumerator WaitingAnim()
+    {
+        yield return new WaitForSeconds(0.1f);
+        UpCurs.GetComponent ( "Animator" );
+        DownCurs.GetComponent ( "Animator" );
+        LeftCurs.GetComponent ( "Animator" );
+        RightCurs.GetComponent ( "Animator" );
     }
 }

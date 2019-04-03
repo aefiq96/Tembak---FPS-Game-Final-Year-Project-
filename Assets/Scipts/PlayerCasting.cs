@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerCasting : MonoBehaviour
 
 {   // declaring variables
-    float DistanceFromTarget;
-    float ToTarget; //how far it is to the target
+    public static float DistanceFromTarget;
+    public float ToTarget; //how far it is to the target
 
     void Update()
     {

@@ -1295,7 +1295,7 @@ GameObject:
   - component: {fileID: 672266051}
   - component: {fileID: 672266055}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Door001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2503,7 +2503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a756d68cf25165c46a443015d4c473e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TheDistance: 0
   TextDisplay: {fileID: 1497533934}
+  TheDoor: {fileID: 672266050}
 --- !u!65 &1324064499
 BoxCollider:
   m_ObjectHideFlags: 0

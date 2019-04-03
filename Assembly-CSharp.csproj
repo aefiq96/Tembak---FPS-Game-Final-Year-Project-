@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scipts\GlobalAmmo.cs" />
     <Compile Include="Assets\Scipts\GunFire.cs" />
     <Compile Include="Assets\Scipts\HandGunDamage.cs" />
+    <Compile Include="Assets\Scipts\PlayerCasting.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/NuzhafiqIqbal/Documents/4th Year GMIT/Final Year Project/Tembak/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

@@ -9,17 +9,21 @@ public class HandGunDamage : MonoBehaviour
     float AllowedRange = 15;
 
     void Update()
-    {   //if statements to enable the gun to shoot, sound & damage amount
-        if (Input.GetButtonDown("Fire1"))
+    {
+        if (GlobalAmmo.LoadedAmmo >= 1)
         {
-
-            RaycastHit Shot;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),out Shot))
+            //if statements to enable the gun to shoot, sound & damage amount
+            if (Input.GetButtonDown("Fire1"))
             {
-                TargetDistance = Shot.distance;
-                if (TargetDistance < AllowedRange)
+
+                RaycastHit Shot;
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot))
                 {
-                    Shot.transform.SendMessage("DeductPoints", DamageAmount);
+                    TargetDistance = Shot.distance;
+                    if (TargetDistance < AllowedRange)
+                    {
+                        Shot.transform.SendMessage("DeductPoints", DamageAmount);
+                    }
                 }
             }
         }

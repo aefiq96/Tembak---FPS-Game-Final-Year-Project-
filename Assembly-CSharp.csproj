@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\GlobalAmmo.cs" />
     <Compile Include="Assets\Scripts\GunFire.cs" />
     <Compile Include="Assets\Scripts\HandGunDamage.cs" />
+    <Compile Include="Assets\Scripts\HandgunReloading.cs" />
     <Compile Include="Assets\Scripts\OpenDoor001.cs" />
     <Compile Include="Assets\Scripts\PlayerCasting.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

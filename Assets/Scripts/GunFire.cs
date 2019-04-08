@@ -6,12 +6,15 @@ public class GunFire : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (GlobalAmmo.LoadedAmmo >= 1)
         {
-            AudioSource gunsound = GetComponent< AudioSource > ();
-            gunsound.Play();
-            GetComponent< Animation > ().Play("GunShot");
-            GlobalAmmo.LoadedAmmo -= 1;
+            if (Input.GetButtonDown("Fire1"))
+            {
+                AudioSource gunsound = GetComponent<AudioSource>();
+                gunsound.Play();
+                GetComponent<Animation>().Play("GunShot");
+                GlobalAmmo.LoadedAmmo -= 1;
+            }
         }
     }
 

@@ -4,13 +4,59 @@ using UnityEngine;
 
 public class HandgunReloading : MonoBehaviour {
     // Declaring variables
-    AudioSource ReloadSound;
-    GameObject CrossObject;
-    GameObject MechanicsObject;
-    int ClipCount;
-    int ReserveCount;
-    int ReloadAvailable;
+    public AudioSource ReloadSound;
+    public GameObject CrossObject;
+    public GameObject MechanicsObject;
+    public int ClipCount;
+    public int ReserveCount;
+    public int ReloadAvailable;
 
+    void Update()
+    {
+        ClipCount = GlobalAmmo.LoadedAmmo;
+        ReserveCount = GlobalAmmo.CurrentAmmo;
+
+        if (ReserveCount == 0)
+        {
+            ReloadAvailable = 0;
+        }
+        else
+        {
+            ReloadAvailable = 10 - ClipCount;
+        }
+
+        if (Input.GetButtonDown("Reload"))
+        {
+            if (ReloadAvailable >= 1)
+            {
+                if (ReserveCount <= ReloadAvailable)
+                {
+                    GlobalAmmo.LoadedAmmo += ReserveCount;
+                    GlobalAmmo.CurrentAmmo -= ReserveCount;
+                    ActionReload();
+                }
+                else
+                {
+                    GlobalAmmo.LoadedAmmo += ReloadAvailable;
+                    GlobalAmmo.CurrentAmmo -= ReloadAvailable;
+                    ActionReload();
+                }
+            }
+            EnableScripts();
+
+        }
+    }
+
+ 
+    // error with shooting after reloading
+    IEnumerator EnableScripts()
+    {
+        yield return new WaitForSeconds(1.1f);
+        this.GetComponent < GunFire > ().enabled = true;
+        //GetComponent("GunFire").setActive(false);
+        CrossObject.SetActive(true);
+        MechanicsObject.SetActive(true);
+    }
 
 
 
@@ -18,6 +64,7 @@ public class HandgunReloading : MonoBehaviour {
     void ActionReload()
     {
         this.GetComponent < GunFire > ().enabled = false;
+        //GetComponent("GunFire").setActive(false);
         CrossObject.SetActive(false);
         MechanicsObject.SetActive(false);
         ReloadSound.Play();

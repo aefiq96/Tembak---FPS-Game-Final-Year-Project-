@@ -42,13 +42,10 @@ public class HandgunReloading : MonoBehaviour {
                     ActionReload();
                 }
             }
-            EnableScripts();
-
+            StartCoroutine(EnableScripts());
         }
     }
-
  
-    // error with shooting after reloading
     IEnumerator EnableScripts()
     {
         yield return new WaitForSeconds(1.1f);

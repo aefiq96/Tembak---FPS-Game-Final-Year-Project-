@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\HandGunDamage.cs" />
     <Compile Include="Assets\Scripts\HandgunReloading.cs" />
     <Compile Include="Assets\Scripts\OpenDoor001.cs" />
+    <Compile Include="Assets\Scripts\PickUp9mm.cs" />
     <Compile Include="Assets\Scripts\PlayerCasting.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEditor.StandardEvents">

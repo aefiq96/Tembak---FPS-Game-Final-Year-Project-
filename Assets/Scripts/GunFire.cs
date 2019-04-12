@@ -21,7 +21,7 @@ public class GunFire : MonoBehaviour
             }
         }
     }
-
+    // Yield requires IEnumerator that's why we don't use void.
     IEnumerator MuzzleOff()
     {
         yield return new WaitForSeconds(0.1f);

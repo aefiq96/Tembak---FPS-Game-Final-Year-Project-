@@ -8,17 +8,16 @@ public class OpenDoor001 : MonoBehaviour
     // declaring variables
     public float TheDistance = PlayerCasting.DistanceFromTarget;
     public GameObject TextDisplay;
-
     public GameObject TheDoor;
     private Animator anim;
-
+    // Update is called once per frame
     void Update()
     {
         TheDistance = PlayerCasting.DistanceFromTarget;
     }
-
+    // mouseover function allows you to click button near triggered button
     void OnMouseOver()
-    {
+    {   // if distance is less 2 or less  then text will pop up
         if (TheDistance <= 2)
         {
             TextDisplay.GetComponent< Text > ().text = "Press Button";
@@ -33,7 +32,7 @@ public class OpenDoor001 : MonoBehaviour
             }
         }
     }
-
+    // text disappears when you leave the area
     void OnMouseExit()
     {
         TextDisplay.GetComponent< Text > ().text = "";

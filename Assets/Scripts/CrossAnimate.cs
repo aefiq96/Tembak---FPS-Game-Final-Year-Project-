@@ -8,7 +8,7 @@ public class CrossAnimate : MonoBehaviour
     public GameObject DownCurs;
     public GameObject LeftCurs;
     public GameObject RightCurs;
-    public Animator upAnim;
+    /*public Animator upAnim;
     public Animator downAnim;
     public Animator leftAnim;
     public Animator rightAnim;
@@ -48,17 +48,24 @@ public class CrossAnimate : MonoBehaviour
                 DownCurs.GetComponent("Animator");
                 LeftCurs.GetComponent("Animator");
                 RightCurs.GetComponent("Animator");
-                WaitingAnim();
+                StartCoroutine(WaitingAnim());
+                //WaitingAnim();
             }
         }
     }
-
+    // Yield requires IEnumerator that's why we don't use void.
     IEnumerator WaitingAnim()
     {
-        yield return new WaitForSeconds(0.1f);
+        /*yield return new WaitForSeconds(0.1f);
         UpCurs.GetComponent ( "Animator" );
         DownCurs.GetComponent ( "Animator" );
         LeftCurs.GetComponent ( "Animator" );
-        RightCurs.GetComponent ( "Animator" );
+        RightCurs.GetComponent ( "Animator" );*/
+
+        yield return new WaitForSeconds(0.1f);
+        UpCurs.GetComponent<Animator>().enabled = true;
+        DownCurs.GetComponent<Animator>().enabled = true;
+        LeftCurs.GetComponent<Animator>().enabled = true;
+        RightCurs.GetComponent<Animator>().enabled = true;
     }
 }

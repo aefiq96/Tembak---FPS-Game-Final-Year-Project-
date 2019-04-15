@@ -14,14 +14,7 @@ public class PickUp9mm : MonoBehaviour {
 
     // Update is called once per frame
 	void Update () {
-        TheDistance = PlayerCasting.DistanceFromTarget;
-        if (Input.GetButtonDown("Action"))
-        {
-            if (TheDistance <= 2)
-            {
-                TakeNineMil();
-            }
-        }
+        TheDistance = PlayerCasting.DistanceFromTarget;        
     }
     // mouseover function allows you to click button near triggered button
     void OnMouseOver()
@@ -30,17 +23,16 @@ public class PickUp9mm : MonoBehaviour {
         {
             TextDisplay.GetComponent< Text > ().text = "Take 9mm Pistol";
         }
-        /*if (Input.GetButtonDown("Action"))
+
+        if (Input.GetButtonDown("Action"))
         {
+            Debug.Log("inside");
+
             if (TheDistance <= 2)
             {
                 TakeNineMil();
             }
-        }
-        if (TheDistance <= 2)
-        {
-            TextDisplay.GetComponent< Text > ().text = "Take 9mm Pistol";
-        }*/
+        }       
     }
     // text disappears when you leave the area
     void OnMouseExit()
@@ -51,10 +43,11 @@ public class PickUp9mm : MonoBehaviour {
     void TakeNineMil()
     {
         PickUpAudio.Play();
-        transform.position = Vector3.up;
+        //transform.position = Vector3.up;
+        transform.position += Vector3.up * Time.deltaTime;
+        //transform.position = Vector3(0, -1000, 0);
         FakeGun.SetActive(false);
         RealGun.SetActive(true);
         AmmoDisplay.SetActive(true);
-
     }
 }

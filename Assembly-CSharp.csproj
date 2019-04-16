@@ -70,10 +70,12 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\AmmoPickup.cs" />
+    <Compile Include="Assets\Scripts\AmmoPickupSMG.cs" />
     <Compile Include="Assets\Scripts\CrossAnimate.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\GlobalAmmo.cs" />
     <Compile Include="Assets\Scripts\GunFire.cs" />
+    <Compile Include="Assets\Scripts\GunFireSMG.cs" />
     <Compile Include="Assets\Scripts\HandGunDamage.cs" />
     <Compile Include="Assets\Scripts\HandgunReloading.cs" />
     <Compile Include="Assets\Scripts\OpenDoor001.cs" />

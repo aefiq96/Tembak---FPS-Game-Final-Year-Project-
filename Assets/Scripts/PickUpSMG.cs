@@ -12,6 +12,8 @@ public class PickUpSMG : MonoBehaviour {
     public GameObject AmmoDisplay;
     public AudioSource PickUpAudio;
 
+    public GameObject Mechanics;
+
     // Update is called once per frame
 	void Update () {
         TheDistance = PlayerCasting.DistanceFromTarget;        
@@ -31,6 +33,7 @@ public class PickUpSMG : MonoBehaviour {
             if (TheDistance <= 2)
             {
                 TakeNineMil();
+                Mechanics.SetActive(true);
             }
         }       
     }

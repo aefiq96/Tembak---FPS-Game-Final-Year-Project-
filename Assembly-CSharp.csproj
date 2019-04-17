@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\AmmoPickup.cs" />
     <Compile Include="Assets\Scripts\AmmoPickupSMG.cs" />
     <Compile Include="Assets\Scripts\CrossAnimate.cs" />
+    <Compile Include="Assets\Scripts\EnemyLook.cs" />
+    <Compile Include="Assets\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\GlobalAmmo.cs" />
     <Compile Include="Assets\Scripts\GunFire.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Assets\Scripts\PickUp9mm.cs" />
     <Compile Include="Assets\Scripts\PickUpSMG.cs" />
     <Compile Include="Assets\Scripts\PlayerCasting.cs" />
+    <Compile Include="Assets\Scripts\ZombieFollow.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/NuzhafiqIqbal/Documents/4th Year GMIT/FINAL YEAR PROJECT/Tembak/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

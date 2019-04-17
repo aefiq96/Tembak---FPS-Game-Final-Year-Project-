@@ -15,12 +15,11 @@ public class GlobalAmmo : MonoBehaviour
     public GameObject LoadedDisplay;
 
     void Update()
-    {   //for ammo display addition
+    {   
+        //for ammo display addition
         InternalAmmo = CurrentAmmo;
         Internaloaded = CurrentAmmo;
         AmmoDisplay.GetComponent< Text > ().text = "" + Internaloaded;
         LoadedDisplay.GetComponent<Text>().text = "" + LoadedAmmo;
-
     }
-
 }

@@ -11,11 +11,9 @@ public class HandGunDamage : MonoBehaviour
     void Update()
     {
         if (GlobalAmmo.LoadedAmmo >= 1)
-        {
-            //if statements to enable the gun to shoot, sound & damage amount
+        {   //if statements to enable the gun to shoot, sound & damage count
             if (Input.GetButtonDown("Fire1"))
             {
-
                 RaycastHit Shot;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out Shot))
                 {

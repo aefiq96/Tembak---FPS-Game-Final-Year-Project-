@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {   //declaring variable
-    int EnemyHealth = 10;
+    public int EnemyHealth = 10;
 
     void DeductPoints(int DamageAmount)
     {   //enemy health taken damage

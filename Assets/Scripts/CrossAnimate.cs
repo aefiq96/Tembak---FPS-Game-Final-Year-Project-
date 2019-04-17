@@ -44,12 +44,16 @@ public class CrossAnimate : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                UpCurs.GetComponent("Animator");
+                /*UpCurs.GetComponent("Animator");
                 DownCurs.GetComponent("Animator");
                 LeftCurs.GetComponent("Animator");
-                RightCurs.GetComponent("Animator");
+                RightCurs.GetComponent("Animator");*/
+                UpCurs.GetComponent<Animator>().enabled = true;
+                DownCurs.GetComponent<Animator>().enabled = true;
+                LeftCurs.GetComponent<Animator>().enabled = true;
+                RightCurs.GetComponent<Animator>().enabled = true;
                 StartCoroutine(WaitingAnim());
-                //WaitingAnim();
+                //WaitingAnim();                
             }
         }
     }

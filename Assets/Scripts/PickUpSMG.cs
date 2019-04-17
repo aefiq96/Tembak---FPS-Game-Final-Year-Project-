@@ -46,9 +46,7 @@ public class PickUpSMG : MonoBehaviour {
     void TakeNineMil()
     {
         PickUpAudio.Play();
-        //transform.position = Vector3.up;
         transform.position += Vector3.up * Time.deltaTime;
-        //transform.position = Vector3(0, -1000, 0);
         FakeGun.SetActive(false);
         RealGun.SetActive(true);
         AmmoDisplay.SetActive(true);

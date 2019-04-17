@@ -55,7 +55,6 @@ public class OpenDoor001 : MonoBehaviour
         yield return new WaitForSeconds(5);
         go.GetComponent<Animator>().enabled = true;
         yield return new WaitForSeconds(1);
-        go.GetComponent<Animator>().enabled = false;
-       
+        go.GetComponent<Animator>().enabled = false;       
     }
 }

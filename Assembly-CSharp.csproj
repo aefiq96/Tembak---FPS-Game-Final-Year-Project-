@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\GunFireSMG.cs" />
     <Compile Include="Assets\Scripts\HandGunDamage.cs" />
     <Compile Include="Assets\Scripts\HandgunReloading.cs" />
+    <Compile Include="Assets\Scripts\HealthMonitor.cs" />
     <Compile Include="Assets\Scripts\OpenDoor001.cs" />
     <Compile Include="Assets\Scripts\PickUp9mm.cs" />
     <Compile Include="Assets\Scripts\PickUpSMG.cs" />

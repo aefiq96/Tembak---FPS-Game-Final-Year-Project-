@@ -8,6 +8,9 @@ public class HandGunDamage : MonoBehaviour
     float TargetDistance;
     float AllowedRange = 15;
 
+    public RaycastHit hit;
+    public GameObject TheBullet;
+
     void Update()
     {
         if (GlobalAmmo.LoadedAmmo >= 1)
@@ -20,7 +23,12 @@ public class HandGunDamage : MonoBehaviour
                     TargetDistance = Shot.distance;
                     if (TargetDistance < AllowedRange)
                     {
-                        Shot.transform.SendMessage("DeductPoints", DamageAmount);
+                        //Shot.transform.SendMessage("DeductPoints", DamageAmount);
+                        Shot.transform.SendMessage("DeductPoints", DamageAmount, SendMessageOptions.DontRequireReceiver);
+                        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
+                        {
+                            Instantiate(TheBullet, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                        }
                     }
                 }
             }

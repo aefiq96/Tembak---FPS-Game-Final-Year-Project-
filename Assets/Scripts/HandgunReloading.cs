@@ -50,7 +50,6 @@ public class HandgunReloading : MonoBehaviour {
     {
         yield return new WaitForSeconds(1.1f);
         this.GetComponent < GunFire > ().enabled = true;
-        //GetComponent("GunFire").setActive(false);
         CrossObject.SetActive(true);
         MechanicsObject.SetActive(true);
     }
@@ -61,7 +60,6 @@ public class HandgunReloading : MonoBehaviour {
     void ActionReload()
     {
         this.GetComponent < GunFire > ().enabled = false;
-        //GetComponent("GunFire").setActive(false);
         CrossObject.SetActive(false);
         MechanicsObject.SetActive(false);
         ReloadSound.Play();

@@ -87,6 +87,8 @@
     <Compile Include="Assets\Scripts\PickUp9mm.cs" />
     <Compile Include="Assets\Scripts\PickUpSMG.cs" />
     <Compile Include="Assets\Scripts\PlayerCasting.cs" />
+    <Compile Include="Assets\Scripts\SpiderEnemyScript.cs" />
+    <Compile Include="Assets\Scripts\SpiderFollow.cs" />
     <Compile Include="Assets\Scripts\SplashToMenu.cs" />
     <Compile Include="Assets\Scripts\ZombieFollow.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

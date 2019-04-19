@@ -10,6 +10,8 @@ public class HandGunDamage : MonoBehaviour
 
     public RaycastHit hit;
     public GameObject TheBullet;
+    public GameObject TheBlood;
+    public GameObject TheBloodGreen;
 
     void Update()
     {
@@ -27,7 +29,18 @@ public class HandGunDamage : MonoBehaviour
                         Shot.transform.SendMessage("DeductPoints", DamageAmount, SendMessageOptions.DontRequireReceiver);
                         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit))
                         {
-                            Instantiate(TheBullet, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                            if (hit.transform.tag == "Zombie")
+                            {
+                                Instantiate(TheBlood, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                            }
+                            if (hit.transform.tag == "Spider")
+                            {
+                                Instantiate(TheBloodGreen, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                            }
+                            if(hit.transform.tag == "Untagged")
+                            {
+                                Instantiate(TheBullet, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                            }
                         }
                     }
                 }

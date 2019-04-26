@@ -43,14 +43,14 @@ public class HandgunReloading : MonoBehaviour
                     ActionReload();
                 }
             }
-            StartCoroutine(EnableScripts(MechanicsObject));
+            StartCoroutine(EnableScripts());
         }
     }
  
-    IEnumerator EnableScripts(GameObject go)
+    IEnumerator EnableScripts()
     {
         yield return new WaitForSeconds(1.1f);
-        go.GetComponent < GunFire > ().enabled = true;
+        this.GetComponent < GunFire > ().enabled = true;
         //this.GetComponent< GunFireSMG >().enabled = true;
         //CrossObject.SetActive(true);
         MechanicsObject.SetActive(true);

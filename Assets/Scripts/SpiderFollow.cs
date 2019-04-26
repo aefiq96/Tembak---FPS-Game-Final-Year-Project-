@@ -33,7 +33,7 @@ public class SpiderFollow : MonoBehaviour {
                 if (AttackTrigger == 0)
                 {
                     TheEnemy.GetComponent<Animation>().Play("walk");
-                    transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, EnemySpeed);
+                    transform.position = Vector3.MoveTowards(transform.position, ThePlayer.transform.position, Time.deltaTime);
                 }
             }
             else

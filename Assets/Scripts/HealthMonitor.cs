@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthMonitor : MonoBehaviour {
 
-    // Declaring variables
+    // Declaring variable
     public GameObject Health04;
     public GameObject Health03;
     public GameObject Health02;
@@ -14,6 +14,7 @@ public class HealthMonitor : MonoBehaviour {
 
     void Update()
     {
+        // Sets the amount of health to each red bar
         CurrentHealth = GlobalHealth.PlayerHealth;
 
         if (CurrentHealth == 8)

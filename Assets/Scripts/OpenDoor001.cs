@@ -38,13 +38,6 @@ public class OpenDoor001 : MonoBehaviour
         TextDisplay.GetComponent< Text > ().text = "";
     }
 
-    /*IEnumerator Example()
-    {
-        print(Time.time);
-        yield return new WaitForSeconds(5);
-        print(Time.time);
-    }*/
-
     // Yield requires IEnumerator that's why we don't use void.
     IEnumerator OpenTheDoor(GameObject go)
     {

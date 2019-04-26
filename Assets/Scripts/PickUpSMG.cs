@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PickUpSMG : MonoBehaviour {
-    // declaring variables
+public class PickUpSMG : MonoBehaviour
+{
+    // Declaring variables
     public float TheDistance = PlayerCasting.DistanceFromTarget;
     public GameObject TextDisplay;
     public GameObject FakeGun;
     public GameObject RealGun;
     public GameObject AmmoDisplay;
     public AudioSource PickUpAudio;
-
     public GameObject Mechanics;
 
     // Update is called once per frame
@@ -37,11 +37,13 @@ public class PickUpSMG : MonoBehaviour {
             }
         }       
     }
+
     // text disappears when you leave the area
     void OnMouseExit()
     {
         TextDisplay.GetComponent< Text > ().text = "";
     }
+
     // function to set up gun on display to pick up in game
     void TakeNineMil()
     {

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyLook : MonoBehaviour {
+public class EnemyLook : MonoBehaviour
+{    
     // Declaring variables
     public GameObject ThePlayer;
 
-    // Positions the enemy in the direction of the player
+    // Positions the enemy AI in the direction of the player
     void Update()
     {
         transform.LookAt(ThePlayer.transform);

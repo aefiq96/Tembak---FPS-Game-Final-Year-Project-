@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CrossAnimate : MonoBehaviour
-{   //declaring variables
+{   
+    // Declaring variables
     public GameObject UpCurs;
     public GameObject DownCurs;
     public GameObject LeftCurs;

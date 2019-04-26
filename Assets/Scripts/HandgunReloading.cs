@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandgunReloading : MonoBehaviour {
+public class HandgunReloading : MonoBehaviour
+{
     // Declaring variables
     public AudioSource ReloadSound;
     public GameObject CrossObject;
@@ -42,24 +43,23 @@ public class HandgunReloading : MonoBehaviour {
                     ActionReload();
                 }
             }
-            StartCoroutine(EnableScripts());
+            StartCoroutine(EnableScripts(MechanicsObject));
         }
     }
  
-    IEnumerator EnableScripts()
+    IEnumerator EnableScripts(GameObject go)
     {
         yield return new WaitForSeconds(1.1f);
-        this.GetComponent < GunFire > ().enabled = true;
-        CrossObject.SetActive(true);
+        go.GetComponent < GunFire > ().enabled = true;
+        //this.GetComponent< GunFireSMG >().enabled = true;
+        //CrossObject.SetActive(true);
         MechanicsObject.SetActive(true);
     }
-
-
-
 
     void ActionReload()
     {
         this.GetComponent < GunFire > ().enabled = false;
+        //this.GetComponent< GunFireSMG >().enabled = false;
         CrossObject.SetActive(false);
         MechanicsObject.SetActive(false);
         ReloadSound.Play();

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunFireSMG : MonoBehaviour {
+public class GunFireSMG : MonoBehaviour
+{
     // Declaring variables
     public GameObject TheSMG;
     public AudioSource SMGSound;

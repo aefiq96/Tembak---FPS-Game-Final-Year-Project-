@@ -6,11 +6,15 @@ For my final year project, I built a first-peson shooter game in Unity 3D. I cho
 especially first-person shooter games. Games like (Call of Duty), (Apex Legends), (BattleField) etc. inspired to build my own first-person
 shooter game.
 
+## Technologies Used
+1. Unity
+2. Visual Studio 2017
+3. GitHub
+
 ## Game Mechanism
 The objective of the game is to survive. There are many enemy AI's around the map including zombies and spiders. Each action of an object
 requires a script (term for a class). Unity has a built in feature where it allows you to create a sprite (3D model). It also allows 
-you to import free downloadable asset packages from online if you want to save time instead of creating your own models.
- 
+you to import free downloadable asset packages from online if you want to save time instead of creating your own models. 
 
 ## Game Control Instructions
 1. Move player forward = w/up key

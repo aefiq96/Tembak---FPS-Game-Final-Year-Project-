@@ -7,7 +7,7 @@ especially first-person shooter games. Games like (Call of Duty), (Apex Legends)
 shooter game.
 
 ## Technologies Used
-1. Unity
+1. Unity 2018.2.11f1 (64-bit)
 2. Visual Studio 2017
 3. GitHub
 
